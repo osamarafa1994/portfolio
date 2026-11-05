@@ -1,383 +1,777 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Osama Arafa Portfolio</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/all.css" />
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-<link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Varela+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index_style.css" />
-	
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Osama Arafa — Backend Developer | PHP &amp; Laravel</title>
+  <meta name="description" content="Osama Arafa is a backend and full-stack developer specialising in PHP, Laravel and MySQL. I design and build reliable web applications, APIs and complete, responsive websites.">
+  <meta name="author" content="Osama Arafa">
+  <meta name="theme-color" content="#06070c">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Osama Arafa — Backend Developer">
+  <meta property="og:description" content="PHP &amp; Laravel developer building reliable web applications, APIs and responsive websites.">
+  <meta property="og:image" content="assets/img/portrait.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Osama Arafa — home">
+          <span class="brand__mark" aria-hidden="true">OA</span>
+          <span class="brand__text">Osama <span>Arafa</span></span>
+        </a>
 
-        <a class="navbar-brand" href="#">Portfolio</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link h" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link a" href="#">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link s" href="#">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link f" href="#">Portofolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link c" href="#">Contact Me</a>
-                </li>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#about">About</a></li>
+            <li><a class="nav__link" href="#skills">Skills</a></li>
+            <li><a class="nav__link" href="#work">Work</a></li>
+            <li><a class="nav__link" href="#services">Services</a></li>
+            <li><a class="nav__link" href="#contact">Contact</a></li>
+          </ul>
+          <a class="btn btn--ghost nav__cta" href="assets/files/Osama-Arafa-CV.pdf" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+        </div>
+      </nav>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span id="progress"></span></div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="grid-lines"></div>
+        <span class="orb orb--1"></span>
+        <span class="orb orb--2"></span>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="status-pill"><span class="dot" aria-hidden="true"></span> Available for new projects</p>
+
+          <h1 class="hero__title">
+            <span class="line">Backend developer</span>
+            <span class="line">building <span class="grad-text">reliable</span></span>
+            <span class="line">web products.</span>
+          </h1>
+
+          <p class="hero__role">
+            <span class="prompt">$</span>
+            <span class="typed" id="typed" aria-live="polite">Laravel applications</span>
+          </p>
+
+          <p class="hero__lead">
+            I'm <strong>Osama Arafa</strong> — a full-stack developer focused on the backend.
+            I build secure web applications with <strong>PHP &amp; Laravel</strong>, design clean
+            <strong>MySQL</strong> databases, and deliver responsive interfaces that hold up in production.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#work">
+              View my work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact">Let's talk</a>
+          </div>
+
+          <ul class="hero__socials" aria-label="Social profiles">
+            <li class="label">Find me</li>
+            <li><a class="social-link" href="https://github.com/osamarafa1994" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a></li>
+            <li><a class="social-link" href="https://www.linkedin.com/in/osama-arafa/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a></li>
+            <li><a class="social-link" href="https://www.facebook.com/osama.arafa.391" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a></li>
+            <li><a class="social-link" href="https://api.whatsapp.com/send?phone=201016830875" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <div class="code-card">
+            <div class="code-card__bar" aria-hidden="true">
+              <i></i><i></i><i></i>
+              <em>app/Http/Controllers/ProjectController.php</em>
+            </div>
+            <pre aria-label="Laravel controller code sample"><code><span class="tok-k">&lt;?php</span>
+
+<span class="tok-k">namespace</span> App\Http\Controllers;
+
+<span class="tok-k">class</span> <span class="tok-f">ProjectController</span> <span class="tok-k">extends</span> Controller
+{
+    <span class="tok-k">public function</span> <span class="tok-f">index</span>()
+    {
+        <span class="tok-v">$projects</span> = Project::<span class="tok-f">query</span>()
+            -&gt;<span class="tok-f">where</span>(<span class="tok-s">'published'</span>, <span class="tok-n">true</span>)
+            -&gt;<span class="tok-f">latest</span>()
+            -&gt;<span class="tok-f">paginate</span>(<span class="tok-n">9</span>);
+
+        <span class="tok-c">// Ship it 🚀</span>
+        <span class="tok-k">return</span> <span class="tok-f">view</span>(
+            <span class="tok-s">'projects.index'</span>,
+            <span class="tok-f">compact</span>(<span class="tok-s">'projects'</span>)
+        );
+    }
+}</code></pre>
+          </div>
+
+          <div class="float-badge float-badge--1" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <div class="float-badge__title">11+ live projects</div>
+              <div class="float-badge__meta">Shipped &amp; in production</div>
+            </div>
+          </div>
+
+          <div class="float-badge float-badge--2" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            <div>
+              <div class="float-badge__title">PHP · Laravel · MySQL</div>
+              <div class="float-badge__meta">Backend first</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="Key numbers">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat reveal">
+            <div class="stat__value" data-count="11" data-suffix="+">11+</div>
+            <div class="stat__label">Projects delivered</div>
+          </div>
+          <div class="stat reveal" style="--d: 90ms">
+            <div class="stat__value" data-count="10" data-suffix="+">10+</div>
+            <div class="stat__label">Technologies used</div>
+          </div>
+          <div class="stat reveal" style="--d: 180ms">
+            <div class="stat__value" data-count="1" data-suffix="+">1+</div>
+            <div class="stat__label">Years of experience</div>
+          </div>
+          <div class="stat reveal" style="--d: 270ms">
+            <div class="stat__value" data-count="100" data-suffix="%">100%</div>
+            <div class="stat__label">Commitment</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__media reveal">
+            <span class="about__ring" aria-hidden="true"></span>
+            <figure class="about__photo">
+              <img src="assets/img/portrait.png" alt="Portrait of Osama Arafa" width="302" height="351" loading="lazy">
+              <figcaption class="about__badge">
+                <strong>1+</strong>
+                <span>Years<br>Experience</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="about__text reveal" style="--d: 120ms">
+            <p class="eyebrow">About me</p>
+            <h2 class="section__title">Turning requirements into<br><span class="grad-text">working software.</span></h2>
+            <p style="margin-top: 22px;">
+              I'm a full-stack developer with a strong backend focus and a high sense of commitment.
+              I've built and shipped <strong>11+ production websites</strong> for companies across software,
+              food, retail, legal and events — handling everything from database structure to the final
+              responsive interface.
+            </p>
+            <p>
+              I care about clean, maintainable code and clear communication, and I'm always looking to
+              learn new technologies and raise the bar on what I deliver.
+            </p>
+
+            <ul class="about__list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Clean, documented code
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                REST APIs &amp; integrations
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Responsive, accessible UI
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Database design &amp; optimisation
+              </li>
             </ul>
+
+            <div class="about__info">
+              <div><span>Name</span>Osama Arafa</div>
+              <div><span>Role</span>Backend / Full-Stack Developer</div>
+              <div><span>Location</span>Egypt · Remote friendly</div>
+              <div><span>Status</span>Open to opportunities</div>
+            </div>
+
+            <a class="btn btn--primary" href="assets/files/Osama-Arafa-CV.pdf" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download my CV
+            </a>
+          </div>
         </div>
-    </nav>
-
-
-
-
-    <header>
-        <div class="header-text">
-            <h1>Hello, I'm Osama Arafa.</h1>
-            <h2>Back End Devoloper</h2>
-            <button class="btn btn-outline-light w-25 p-2 hire">Hire Me</button>
-            <div class="icons">
-                <a href="https://www.facebook.com/osama.arafa.391"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=201098549016"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://github.com/osamarafa1994"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/osama-arafa-3a81b4111/"><i class="fab fa-linkedin"></i></a>
-               <!-- <i class="fab fa-instagram"></i> -->
-            </div>
-        </div>
-    </header>
-
-    
-        <section class="about wow bounceInUp">
-        <h2>Welcome To My Portofolio , It's Nice to Meet You.</h2>
-        <h3>Know More About Me</h3>
-		<p>I'm Full-Stack Developer with a high sense of commitment and +1 year of experience on Web
-Applications Development, Backend and Frontend Technologies , Seeking to enhance my skills
-and also learn new technologies .
-</p>
-    </section>
-    
-    
-    
-    <div class="skill-title text-center">
-        <h3>Skills & Used Technologies</h3>
-    </div>
-
-    <section class="skills-section">
-        <div class="container wow bounceInUp">
-            <div class="row ">
-                <div class="col-md-3">
-                    <div class="skill">
-                        <img src="images/html.png">
-                        <h6>HTML</h6>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="skill">
-                        <img src="images/css.png">
-                        <h6>CSS</h6>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="skill">
-                        <img src="images/css.png">
-                        <h6>CSS3</h6>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="skill">
-                        <img src="images/boot.png">
-                        <h6>Bootstrap 4</h6>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row">
-
-                <div class="col-md-3">
-                    <div class="skill">
-                        <img src="images/js.svg">
-                        <h6>Java Script</h6>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="skill">
-                        <img src="images/jq.jpg">
-                        <h6>Jquery</h6>
-                    </div>
-                </div>
-				<div class="col-md-3">
-                    <div class="skill">
-                        <img src="images/PHP.png">
-                        <h6>PHP</h6>
-                    </div>
-                </div>
-               
-				<div class="col-md-3">
-                    <div class="skill">
-                        <img src="images/mysql.png">
-                        <h6>MySQL</h6>
-                    </div>
-                </div>
-               
-
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="skill">
-                        <img src="images/codeigniter.png">
-                        <h6>Codeigniter</h6>
-                    </div>
-                </div> 
-				
-				<div class="col-md-3">
-                    <div class="skill">
-                        <img src="images/laravel.jpg">
-                        <h6>Laravel</h6>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="skill">
-                        <img src="images/git.png">
-                        <h6>Git</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-
-    <section class="projects wow bounceInRight">
-        <div class="folio-title text-center"><h3>Portfolio</h3></div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-4 col-lg-6">
-                    <div class="project-card project1">
-                        <overlay></overlay>
-                        <button class=" btn btn-danger w-50 btn-pro">Restaurant
-                            <a href="http://almedinafood.com/"></a>
-                        </button>
-                        <div class="img-folio"><img src="./images/1.png"></div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-6">
-                    <div class="project-card project2">
-                        <overlay></overlay>
-                        <button class=" btn btn-danger w-50 btn-pro">Software Company
-                        <a href="http://easytiec.com"></a>
-                        </button>
-                        <div class="img-folio"><img src="./images/2.png"></div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-6">
-                    <div class="project-card project3">
-                        <overlay></overlay>
-                        <button class=" btn btn-danger w-50 btn-pro">Elamana Project
-                        <a href="http://almedina-food.com/amana/public/"></a>   
-                        </button>
-                        <div class="img-folio"><img src="./images/3.png"></div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-6">
-                    <div class="project-card project1">
-                        <overlay></overlay>
-                        <button class=" btn btn-danger w-50 btn-pro">lawyer Project
-                        <a href="http://ahmedragheb.org/"></a>
-                        </button>
-                        <div class="img-folio"><img src="./images/4.png"></div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-6">
-                    <div class="project-card project2">
-                        <overlay></overlay>
-                        <button class=" btn btn-danger w-50 btn-pro">Transportation of furniture 
-                        <a href="http://furnitureknight.com/"></a>
-                        </button>
-                        <div class="img-folio"><img src="./images/5.png"></div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-6">
-                    <div class="project-card project1">
-                        <overlay></overlay>
-                        <button class=" btn btn-danger w-50 btn-pro">Alwardibookshop Project
-                        <a href="https://alwardibookshop.net/"></a>
-                        </button>
-                        <div class="img-folio"><img src="./images/6.png"></div>
-                    </div>
-                </div>
-				
-				<div class="col-xl-4 col-lg-6">
-                    <div class="project-card project3">
-                        <overlay></overlay>
-                        <button class=" btn btn-danger w-50 btn-pro">E-commerce Project
-                        <a href="https://e-commerce.moktam.com/"></a>
-                        </button>
-                        <div class="img-folio"><img src="./images/7.png"></div>
-                    </div>
-                </div>
-
-				<div class="col-xl-4 col-lg-6">
-                    <div class="project-card project1">
-                        <overlay></overlay>
-                        <button class=" btn btn-danger w-50 btn-pro">Uncover Event Project
-                        <a href="http://www.freestudioegypt.com/uncover3/event-details.php"></a>
-                        </button>
-                        <div class="img-folio"><img src="./images/8.png" style="background-color: black !important;"></div>
-                    </div>
-                </div>
-				
-				<div class="col-xl-4 col-lg-6">
-                    <div class="project-card project1">
-                        <overlay></overlay>
-                        <button class=" btn btn-danger w-50 btn-pro">AGP Project
-                        <a href="http://www.freestudioegypt.com/AGP/2home.php"></a>
-                        </button>
-                        <div class="img-folio"><img src="./images/9.png" ></div>
-                    </div>
-                </div>
-          				
-		   </div>
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <p class="eyebrow">Skills &amp; technologies</p>
+          <h2 class="section__title">The stack I build with</h2>
+          <p class="section__subtitle">A practical toolkit for taking a product from database schema to a polished front end.</p>
         </div>
+
+        <div class="skills__grid">
+          <article class="skill-card reveal">
+            <div class="skill-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Backend</h3>
+            <p>Server-side logic, authentication, dashboards and business workflows.</p>
+            <ul class="tech-list">
+              <li class="tech"><img src="assets/img/tech/php.svg" alt="" width="16" height="16" loading="lazy">PHP</li>
+              <li class="tech"><img src="assets/img/tech/laravel.svg" alt="" width="16" height="16" loading="lazy">Laravel</li>
+              <li class="tech"><img src="assets/img/tech/codeigniter.svg" alt="" width="16" height="16" loading="lazy">CodeIgniter</li>
+              <li class="tech">REST APIs</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" style="--d: 100ms">
+            <div class="skill-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Frontend</h3>
+            <p>Responsive, cross-browser interfaces that feel fast and effortless.</p>
+            <ul class="tech-list">
+              <li class="tech"><img src="assets/img/tech/html.svg" alt="" width="16" height="16" loading="lazy">HTML5</li>
+              <li class="tech"><img src="assets/img/tech/css.svg" alt="" width="16" height="16" loading="lazy">CSS3</li>
+              <li class="tech"><img src="assets/img/tech/js.svg" alt="" width="16" height="16" loading="lazy">JavaScript</li>
+              <li class="tech"><img src="assets/img/tech/jquery.svg" alt="" width="16" height="16" loading="lazy">jQuery</li>
+              <li class="tech"><img src="assets/img/tech/bootstrap.svg" alt="" width="16" height="16" loading="lazy">Bootstrap</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" style="--d: 200ms">
+            <div class="skill-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3>Data &amp; tools</h3>
+            <p>Solid data models and a workflow built around version control.</p>
+            <ul class="tech-list">
+              <li class="tech"><img src="assets/img/tech/mysql.svg" alt="" width="16" height="16" loading="lazy">MySQL</li>
+              <li class="tech"><img src="assets/img/tech/git.svg" alt="" width="16" height="16" loading="lazy">Git</li>
+              <li class="tech"><img src="assets/img/tech/git.svg" alt="" width="16" height="16" loading="lazy">GitHub</li>
+              <li class="tech">Clean code</li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
-    
-    
-    <div class="cv-div">
-    <section class="my-cv ">
-        <img class="svg-img wow bounceInUp" src="images/img-svg.svg">
-        <img class="svg-img-right wow bounceInUp" src="images/img-sv-right.svg">
-        <div class="container wow bounceIn">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="img-cv"><img src="images/my-img.jpg"></div>
-            </div>
-            <div class="col-md-7">
-            <h4>Hello Again ,</h4>
-            <h6>Hope My Portofolio and my work has an Appreciation from you and has your admission.</h6>
-            <p>So, There is my cv for more information.</p>
-            <a target="_black" class="mycv btn btn-danger w-50" download href="files/OsamaArafa'Resume2019.pdf">My Cv</a>
-            </div>
-        </div> 
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="projects__head">
+          <div class="section__head reveal">
+            <p class="eyebrow">Selected work</p>
+            <h2 class="section__title">Projects I've shipped</h2>
+            <p class="section__subtitle">A selection of live client websites, from corporate platforms to restaurants and online stores.</p>
+          </div>
+
+          <div class="filters reveal" role="group" aria-label="Filter projects by type">
+            <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter" type="button" data-filter="corporate" aria-pressed="false">Corporate</button>
+            <button class="filter" type="button" data-filter="restaurant" aria-pressed="false">Restaurants</button>
+            <button class="filter" type="button" data-filter="ecommerce" aria-pressed="false">E-commerce</button>
+            <button class="filter" type="button" data-filter="legal" aria-pressed="false">Legal</button>
+            <button class="filter" type="button" data-filter="other" aria-pressed="false">Other</button>
+          </div>
         </div>
+
+        <div class="projects__grid" id="projects-grid">
+
+          <article class="project reveal" data-cat="corporate">
+            <a class="project__media" href="https://fekra-web.com/" target="_blank" rel="noopener" aria-label="Visit Fekra Web website">
+              <span class="cover" style="--h: 255">
+                <span class="cover__bar"><i></i><i></i><i></i><em>fekra-web.com</em></span>
+                <span class="cover__body">
+                  <span class="cover__mark">FW</span>
+                  <span class="cover__kind">Corporate website</span>
+                </span>
+              </span>
+              <span class="project__overlay"><span class="project__view">Visit website
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span></span>
+            </a>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="tag">Corporate</span>
+                <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+              <h3 class="project__title"><a href="https://fekra-web.com/" target="_blank" rel="noopener">Fekra Web</a></h3>
+              <p class="project__desc">Software company website presenting services, previous work and lead-generation contact flows.</p>
+              <ul class="project__stack"><li>PHP</li><li>MySQL</li><li>Responsive</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="restaurant" style="--d: 80ms">
+            <a class="project__media" href="http://almedinafood.com/" target="_blank" rel="noopener" aria-label="Visit Al Medina Food website">
+              <span class="cover" style="--h: 14">
+                <span class="cover__bar"><i></i><i></i><i></i><em>almedinafood.com</em></span>
+                <span class="cover__body">
+                  <span class="cover__mark">AM</span>
+                  <span class="cover__kind">Restaurant website</span>
+                </span>
+              </span>
+              <span class="project__overlay"><span class="project__view">Visit website
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span></span>
+            </a>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="tag">Restaurant</span>
+                <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+              <h3 class="project__title"><a href="http://almedinafood.com/" target="_blank" rel="noopener">Al Medina Food</a></h3>
+              <p class="project__desc">Restaurant website with a full menu showcase, offers and direct ordering contact channels.</p>
+              <ul class="project__stack"><li>PHP</li><li>MySQL</li><li>Responsive</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="corporate" style="--d: 160ms">
+            <a class="project__media" href="http://easytiec.com" target="_blank" rel="noopener" aria-label="Visit Easy Tiec website">
+              <span class="cover" style="--h: 205">
+                <span class="cover__bar"><i></i><i></i><i></i><em>easytiec.com</em></span>
+                <span class="cover__body">
+                  <span class="cover__mark">ET</span>
+                  <span class="cover__kind">Software company</span>
+                </span>
+              </span>
+              <span class="project__overlay"><span class="project__view">Visit website
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span></span>
+            </a>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="tag">Corporate</span>
+                <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+              <h3 class="project__title"><a href="http://easytiec.com" target="_blank" rel="noopener">Easy Tiec</a></h3>
+              <p class="project__desc">Corporate software house website with detailed service pages and inquiry forms.</p>
+              <ul class="project__stack"><li>PHP</li><li>Bootstrap</li><li>Responsive</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="corporate">
+            <a class="project__media" href="http://karizmaegy.com/" target="_blank" rel="noopener" aria-label="Visit Karizma Group website">
+              <span class="cover" style="--h: 288">
+                <span class="cover__bar"><i></i><i></i><i></i><em>karizmaegy.com</em></span>
+                <span class="cover__body">
+                  <span class="cover__mark">KG</span>
+                  <span class="cover__kind">Corporate group</span>
+                </span>
+              </span>
+              <span class="project__overlay"><span class="project__view">Visit website
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span></span>
+            </a>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="tag">Corporate</span>
+                <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+              <h3 class="project__title"><a href="http://karizmaegy.com/" target="_blank" rel="noopener">Karizma Group</a></h3>
+              <p class="project__desc">Multi-section corporate website for a business group, built around a strong brand presence.</p>
+              <ul class="project__stack"><li>PHP</li><li>MySQL</li><li>Responsive</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="legal" style="--d: 80ms">
+            <a class="project__media" href="http://ahmedragheb.org/" target="_blank" rel="noopener" aria-label="Visit Ahmed Ragheb Law website">
+              <span class="cover" style="--h: 218">
+                <span class="cover__bar"><i></i><i></i><i></i><em>ahmedragheb.org</em></span>
+                <span class="cover__body">
+                  <span class="cover__mark">AR</span>
+                  <span class="cover__kind">Law office</span>
+                </span>
+              </span>
+              <span class="project__overlay"><span class="project__view">Visit website
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span></span>
+            </a>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="tag">Legal</span>
+                <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+              <h3 class="project__title"><a href="http://ahmedragheb.org/" target="_blank" rel="noopener">Ahmed Ragheb Law</a></h3>
+              <p class="project__desc">Law office website presenting practice areas, legal consultancy and contact details.</p>
+              <ul class="project__stack"><li>PHP</li><li>MySQL</li><li>Responsive</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="other" style="--d: 160ms">
+            <a class="project__media" href="http://furnitureknight.com/" target="_blank" rel="noopener" aria-label="Visit Furniture Knight website">
+              <span class="cover" style="--h: 34">
+                <span class="cover__bar"><i></i><i></i><i></i><em>furnitureknight.com</em></span>
+                <span class="cover__body">
+                  <span class="cover__mark">FK</span>
+                  <span class="cover__kind">Services website</span>
+                </span>
+              </span>
+              <span class="project__overlay"><span class="project__view">Visit website
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span></span>
+            </a>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="tag">Services</span>
+                <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+              <h3 class="project__title"><a href="http://furnitureknight.com/" target="_blank" rel="noopener">Furniture Knight</a></h3>
+              <p class="project__desc">Furniture transportation company site with service breakdown and quote requests.</p>
+              <ul class="project__stack"><li>PHP</li><li>MySQL</li><li>Responsive</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="ecommerce">
+            <a class="project__media" href="https://alwardibookshop.net/" target="_blank" rel="noopener" aria-label="Visit Alwardi Bookshop website">
+              <span class="cover" style="--h: 160">
+                <span class="cover__bar"><i></i><i></i><i></i><em>alwardibookshop.net</em></span>
+                <span class="cover__body">
+                  <span class="cover__mark">AB</span>
+                  <span class="cover__kind">Online bookstore</span>
+                </span>
+              </span>
+              <span class="project__overlay"><span class="project__view">Visit website
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span></span>
+            </a>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="tag">E-commerce</span>
+                <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+              <h3 class="project__title"><a href="https://alwardibookshop.net/" target="_blank" rel="noopener">Alwardi Bookshop</a></h3>
+              <p class="project__desc">Online bookstore with catalogue browsing, product pages and store information.</p>
+              <ul class="project__stack"><li>E-commerce</li><li>PHP</li><li>MySQL</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="ecommerce" style="--d: 80ms">
+            <a class="project__media" href="https://e-commerce.moktam.com/" target="_blank" rel="noopener" aria-label="Visit Moktam Store website">
+              <span class="cover" style="--h: 322">
+                <span class="cover__bar"><i></i><i></i><i></i><em>e-commerce.moktam.com</em></span>
+                <span class="cover__body">
+                  <span class="cover__mark">MS</span>
+                  <span class="cover__kind">Online store</span>
+                </span>
+              </span>
+              <span class="project__overlay"><span class="project__view">Visit website
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span></span>
+            </a>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="tag">E-commerce</span>
+                <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+              <h3 class="project__title"><a href="https://e-commerce.moktam.com/" target="_blank" rel="noopener">Moktam Store</a></h3>
+              <p class="project__desc">E-commerce storefront with product listings, cart flow and a responsive checkout experience.</p>
+              <ul class="project__stack"><li>E-commerce</li><li>PHP</li><li>MySQL</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="restaurant" style="--d: 160ms">
+            <a class="project__media" href="http://areekahreefy.com/" target="_blank" rel="noopener" aria-label="Visit Areekahreefy Restaurant website">
+              <span class="cover" style="--h: 350">
+                <span class="cover__bar"><i></i><i></i><i></i><em>areekahreefy.com</em></span>
+                <span class="cover__body">
+                  <span class="cover__mark">AK</span>
+                  <span class="cover__kind">Restaurant website</span>
+                </span>
+              </span>
+              <span class="project__overlay"><span class="project__view">Visit website
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span></span>
+            </a>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="tag">Restaurant</span>
+                <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+              <h3 class="project__title"><a href="http://areekahreefy.com/" target="_blank" rel="noopener">Areekahreefy</a></h3>
+              <p class="project__desc">Restaurant website featuring the menu, photo gallery and branch details.</p>
+              <ul class="project__stack"><li>PHP</li><li>MySQL</li><li>Responsive</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="other">
+            <a class="project__media" href="http://www.freestudioegypt.com/uncover3/event-details.php" target="_blank" rel="noopener" aria-label="Visit Uncover Event website">
+              <span class="cover" style="--h: 192">
+                <span class="cover__bar"><i></i><i></i><i></i><em>freestudioegypt.com/uncover3</em></span>
+                <span class="cover__body">
+                  <span class="cover__mark">UE</span>
+                  <span class="cover__kind">Event platform</span>
+                </span>
+              </span>
+              <span class="project__overlay"><span class="project__view">Visit website
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span></span>
+            </a>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="tag">Events</span>
+                <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+              <h3 class="project__title"><a href="http://www.freestudioegypt.com/uncover3/event-details.php" target="_blank" rel="noopener">Uncover Event</a></h3>
+              <p class="project__desc">Event details platform for a multi-day event, including schedule and venue information.</p>
+              <ul class="project__stack"><li>PHP</li><li>MySQL</li><li>Dynamic pages</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="corporate" style="--d: 80ms">
+            <a class="project__media" href="http://www.freestudioegypt.com/AGP/2home.php" target="_blank" rel="noopener" aria-label="Visit AGP website">
+              <span class="cover" style="--h: 240">
+                <span class="cover__bar"><i></i><i></i><i></i><em>freestudioegypt.com/AGP</em></span>
+                <span class="cover__body">
+                  <span class="cover__mark">AGP</span>
+                  <span class="cover__kind">Corporate project</span>
+                </span>
+              </span>
+              <span class="project__overlay"><span class="project__view">Visit website
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span></span>
+            </a>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="tag">Corporate</span>
+                <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+              <h3 class="project__title"><a href="http://www.freestudioegypt.com/AGP/2home.php" target="_blank" rel="noopener">AGP</a></h3>
+              <p class="project__desc">Corporate project website with a structured, multi-page content layout.</p>
+              <ul class="project__stack"><li>PHP</li><li>MySQL</li><li>Responsive</li></ul>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="projects__note">
+          More work available on <a href="https://github.com/osamarafa1994" target="_blank" rel="noopener">GitHub</a> — or ask me for a walkthrough of any project.
+        </p>
+      </div>
     </section>
-        </div>
-    
-  <!--
-  <div class="services">
-        <div class="services-title text-center"><h3>Services</h3></div>
-        <div class="container">
-        <div class="row">
-        <div class="col-lg-4">
-            <div class="service-card wow bounceInUp">
-                <h3>Responsive Design</h3>
-                <p>Responsive Break Points is one of the most important steps to make attractive web applications to 
-                be viewed in all screens with all sizes.
-                </p>
-            </div>
-            </div> 
-            
-             <div class="col-lg-4">
-            <div class="service-card wow bounceInUp">
-                <h3>Clean Code</h3>
-                <p>Write clean and documented code to make anyone has the ability to understand the code, clean code help devolopers to maintain their code and review it more easily.
-                </p>
-            </div>
-            </div> 
-            
-             <div class="col-lg-4">
-            <div class="service-card wow bounceInUp">
-                <h3>Ui & Ux Principles</h3>
-                <p>Make beautiful design provide access easily and flexible view to the users and it help them to feel good while they use the web applications.
-                </p>
-            </div>
-            </div> 
-        </div>
-        </div>
-    
-    </div>
-	-->
-    
-    
-    <footer>
-        <div class="container">
-        <div class="row">
-        <div class="col-md-3">
-        <h6>Created By <span>Osama Arafa</span></h6>    
-        </div>
-            
-        <div class="col-md-3">
-            <div class="footer-info">
-                    <i class="fas fa-mobile-alt"></i>   
-					
-                <span><a href="tel:+201016830875">+201016830875</a></span>
-            </div>
-            </div>
-            <div class="col-md-3">
-            <div class="footer-info">
-                <i class="fas fa-envelope"></i>    
-                <span><a href="mailto:osamaarafa15@gmail.com">osamaarafa15@gmail.com</a></span>
-            </div>   
-        </div>
-            
-              <div class="col-md-3 back">
-                 <i class="fas fa-chevron-circle-up back-btn"></i> 
-                <span class="back-btn">Back To Top</span>     
-            </div>
-            </div>
-        </div>
-    </footer>
-    
-    
-    <div class="project-info">
-        
-        <i class="fas fa-times-circle close-btn"></i>
-        
-        <div class="project-info-img">
-        <img class="project-img">
-        </div>
-     <div class="project-info-btns">
-        <button class="btn btn-light p-3 w-25 mr-2 proo-btn"><a> See Project  <i class="fas fa-laptop"></i></a></button>
-    </div>    
-    </div>
 
+    <!-- ============ SERVICES ============ -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <p class="eyebrow">What I do</p>
+          <h2 class="section__title">How I can help</h2>
+          <p class="section__subtitle">One developer accountable for the whole build — from the database up to the interface.</p>
+        </div>
 
+        <div class="services__grid">
+          <article class="service reveal">
+            <span class="service__num" aria-hidden="true">01</span>
+            <div class="service__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Backend development</h3>
+            <p>Robust server-side logic, authentication, dashboards and business workflows built with PHP and Laravel.</p>
+          </article>
 
-<div class="loadingscreen">
-      <div class="spinner">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
+          <article class="service reveal" style="--d: 100ms">
+            <span class="service__num" aria-hidden="true">02</span>
+            <div class="service__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3>Database design</h3>
+            <p>Clean MySQL schemas, well-indexed queries and data models that stay reliable as your product grows.</p>
+          </article>
+
+          <article class="service reveal" style="--d: 200ms">
+            <span class="service__num" aria-hidden="true">03</span>
+            <div class="service__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h3>Full-stack delivery</h3>
+            <p>Responsive interfaces on top of a solid backend, plus deployment support and a clean handover.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section section--tight cta">
+      <div class="container">
+        <div class="cta__box reveal">
+          <div>
+            <h2 class="cta__title">Have a project in mind?<br>Let's build it together.</h2>
+            <p class="cta__text">Tell me what you're working on and I'll come back with a clear plan, timeline and honest estimate.</p>
+          </div>
+          <a class="btn btn--primary" href="#contact">
+            Start a conversation
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="reveal">
+            <p class="eyebrow">Contact</p>
+            <h2 class="section__title">Let's talk about<br><span class="grad-text">your next project.</span></h2>
+            <p class="section__subtitle" style="margin-bottom: 28px;">
+              I'm currently open to freelance work and full-time opportunities. The fastest way to reach me is a message on WhatsApp.
+            </p>
+
+            <div class="contact__cards">
+              <a class="contact-card" href="mailto:osamaarafa15@gmail.com">
+                <span class="contact-card__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                </span>
+                <span><small>Email</small><strong>osamaarafa15@gmail.com</strong></span>
+              </a>
+
+              <a class="contact-card" href="tel:+201016830875">
+                <span class="contact-card__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <span><small>Phone</small><strong>+20 101 683 0875</strong></span>
+              </a>
+
+              <a class="contact-card" href="https://api.whatsapp.com/send?phone=201016830875" target="_blank" rel="noopener">
+                <span class="contact-card__icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                </span>
+                <span><small>WhatsApp</small><strong>Chat with me directly</strong></span>
+              </a>
+
+              <div class="contact-card">
+                <span class="contact-card__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <span><small>Location</small><strong>Egypt · Remote friendly</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact__form reveal" id="contact-form" style="--d: 120ms" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" placeholder="Jane Doe" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="jane@company.com" autocomplete="email" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="Project inquiry — e-commerce store">
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me a little about your project, goals and timeline..." required></textarea>
+            </div>
+
+            <button class="btn btn--primary btn--block" type="submit">
+              Send message
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+
+            <p class="form-note">This opens your email app with the message ready to send.</p>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <a class="brand" href="#home">
+          <span class="brand__mark" aria-hidden="true">OA</span>
+          <span class="brand__text">Osama <span>Arafa</span></span>
+        </a>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer__socials">
+          <a href="https://github.com/osamarafa1994" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/osama-arafa/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.facebook.com/osama.arafa.391" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="mailto:osamaarafa15@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Osama Arafa. All rights reserved.</p>
+        <p>Designed &amp; built with care.</p>
       </div>
     </div>
+  </footer>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/index.js"></script>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
 
+  <script src="assets/js/main.js"></script>
 </body>
-
 </html>
